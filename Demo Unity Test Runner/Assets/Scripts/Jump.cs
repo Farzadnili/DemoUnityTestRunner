@@ -16,15 +16,18 @@ public class Jump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Terrain" && Input.GetKeyDown("j")){
+       if(Input.GetKeyDown("j")){
             Vector3 jump = new Vector3(0,JumpHigh,0); 
             rb.AddForce(jump);
         }
     }
+
+    //  void OnTriggerEnter(Collider other)
+    // {
+    //     if(other.tag == "Terrain" && Input.GetKeyDown("j")){
+    //         Vector3 jump = new Vector3(0,JumpHigh,0); 
+    //         rb.AddForce(jump);
+    //     }
+    // }
 
 }
