@@ -18,19 +18,19 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("w")){
+        if(Input.GetKey("w")){
             Vector3 forward = new Vector3(1,0,0);
             rb.velocity = forward * forwardSpeed;
         }
-        if(Input.GetKeyDown("s")){
+        if(Input.GetKey("s")){
             Vector3 backward = new Vector3(-1,0,0);
             rb.velocity = backward * backardSpeed;
         }
-        if(Input.GetKeyDown("a")){
+        if(Input.GetKey("a")){
             Vector3 left = new Vector3(0,0,1);
             rb.velocity = left * leftSpeed;
         }
-        if(Input.GetKeyDown("d")){
+        if(Input.GetKey("d")){
             Vector3 right = new Vector3(0,0,-1);
             rb.velocity = right * rightSpeed;
         }
