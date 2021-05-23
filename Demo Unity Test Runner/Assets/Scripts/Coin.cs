@@ -6,27 +6,13 @@ using UnityEngine.UI;
 public class Coin : MonoBehaviour
 {
     public GameObject Player;
-    int coin = 10;
-    int sum;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text text;
+    
+   public static int sum;
 
-    // Update is called once per frame
-    void Update()
+  void Update()
     {
-        
+        GameObject.FindWithTag("Counter").GetComponent<Text>().text = sum.ToString();
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player"){
-           Destroy(gameObject);
-
-           sum = sum + coin;
-           GameObject.FindWithTag("Counter").GetComponent<Text>().text = sum.ToString();
-           
-        }
-    }
+       
 }

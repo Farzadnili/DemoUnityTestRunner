@@ -13,14 +13,15 @@ public class Move : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-    }
+        
+    } 
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKey("w")){
-            Vector3 forward = new Vector3(1,0,0);
-            rb.velocity = forward * forwardSpeed;
+           Vector3 forward = new Vector3(1,0,0);
+           rb.velocity = forward * forwardSpeed;
         }
         if(Input.GetKey("s")){
             Vector3 backward = new Vector3(-1,0,0);
@@ -33,7 +34,14 @@ public class Move : MonoBehaviour
         if(Input.GetKey("d")){
             Vector3 right = new Vector3(0,0,-1);
             rb.velocity = right * rightSpeed;
-        }
-        
+        }   
     }
+
+//    public Vector3 backward(){
+//        return 
+//    }
+    // public Vector3 forward(Vector3 forward){
+    //     // Vector3 forward = new Vector3(1,0,0);
+    //      return rb.velocity = forward * forwardSpeed;
+    // }
 }
